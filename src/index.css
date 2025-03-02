@@ -30,3 +30,9 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+hr {
+  border: 1px solid black;
+  margin: 0.75rem auto;
+  width: 30%;
+}

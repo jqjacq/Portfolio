@@ -4,16 +4,12 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import "../styles/carousel.css";
-// import "../styles/index.css";
-import {
-  EffectCoverflow,
-  Pagination,
-  Navigation,
-  HashNavigation,
-} from "swiper/modules";
-
+import { EffectCoverflow, Pagination, Navigation, HashNavigation } from "swiper/modules";
 import projectlist from "../data/projectslist.js";
+import "../styles/swiper.css";
+
+const images2023 = import.meta.glob("/src/assets/2023/*", { eager: true });
+const images2022 = import.meta.glob("/src/assets/2022/*", { eager: true });
 
 const PastProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -32,13 +28,7 @@ const PastProjects = () => {
           centeredSlides={true}
           slidesPerView={"auto"}
           initialSlide={2}
-          coverflowEffect={{
-            rotate: 35,
-            stretch: 0,
-            depth: 25,
-            modifier: 1,
-            slideShadows: false,
-          }}
+          coverflowEffect={{ rotate: 35, stretch: 0, depth: 25, modifier: 1, slideShadows: false }}
           pagination={{
             clickable: true,
           }}
@@ -47,13 +37,14 @@ const PastProjects = () => {
         >
           {projects
             .filter((project) => project.year === 2023)
-            .map((project) => (
-              <SwiperSlide key={project.id} data-hash={project.hash}>
-                <div className="project-grid" key={project.id}>
-                  <h5 className="bold centerText project-type">
-                    {/* {project.projecttype}: {project.name} */}
-                    {project.fullname}
-                    {project.website ? (
+            .map((project) => {
+              const imageSrc = images2023[`/src/assets/2023/${project.img}`]?.default;
+
+              return (
+                <SwiperSlide key={project.id} data-hash={project.hash}>
+                  <div className="project-grid" key={project.id}>
+                    <h5 className="bold centerText project-type">
+                      {project.fullname}
                       <a
                         target="_blank "
                         className={`${project.className}`}
@@ -62,47 +53,30 @@ const PastProjects = () => {
                       >
                         <img
                           className="project-images"
-                          src={project.img}
+                          src={imageSrc}
                           alt={project.name}
                           title={project.description}
                         ></img>
                       </a>
-                    ) : (
-                      <a
-                        target="_blank "
-                        href={`https://github.com/jqjacq/${project.link}`}
-                      >
-                        <img
-                          className="project-images"
-                          src={project.img}
-                          alt={project.name}
-                          title={project.description}
-                        ></img>
-                      </a>
-                    )}
-                    <div className="centerText">
-                      <span className="subsize">{project.language}</span>
-                      <div className="codelink bold centerText">
-                        <a
-                          target="_blank "
-                          href={`https://github.com/jqjacq/${project.link}`}
-                        >
-                          Code <i className="fa fa-github icons"></i>
-                        </a>
-                        {project.website ? (
-                          <a
-                            target="_blank "
-                            href={`https://jqjacq.github.io/${project.link}`}
-                          >
-                            Website <i className="fa fa-link icons"></i>
+                      {/* If project code and/or website */}
+                      <div className="centerText">
+                        <span className="subsize">{project.language}</span>
+                        <div className="codelink bold centerText">
+                          <a target="_blank " href={`https://github.com/jqjacq/${project.link}`}>
+                            Code <i className="fa fa-github icons"></i>
                           </a>
-                        ) : null}
+                          {project.website && (
+                            <a target="_blank " href={`https://jqjacq.github.io/${project.link}`}>
+                              Website <i className="fa fa-link icons"></i>
+                            </a>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  </h5>
-                </div>
-              </SwiperSlide>
-            ))}
+                    </h5>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
         </Swiper>
       </div>
       <div className="transparent-container">
@@ -114,56 +88,47 @@ const PastProjects = () => {
           centeredSlides={true}
           slidesPerView={"auto"}
           initialSlide={2}
-          coverflowEffect={{
-            rotate: 35,
-            stretch: 0,
-            depth: 25,
-            modifier: 1,
-            slideShadows: false,
-          }}
+          coverflowEffect={{ rotate: 35, stretch: 0, depth: 25, modifier: 1, slideShadows: false }}
           pagination={true}
           modules={[EffectCoverflow, Pagination, Navigation, HashNavigation]}
           className="mySwiper"
         >
           {projects
             .filter((project) => project.year === 2022)
-            .map((project) => (
-              <SwiperSlide key={project.id}>
-                <div
-                  className="project-grid"
-                  key={project.id}
-                  data-hash={project.hash}
-                >
-                  <h5 className="bold centerText project-type">
-                    {project.fullname}
-                    <a
-                      target="_blank "
-                      className={`${project.className}`}
-                      href={`https://github.com/jqjacq/${project.link}`}
-                      alt="Website Link"
-                    >
-                      <img
-                        className="project-images"
-                        src={project.img}
-                        alt={project.name}
-                        title={project.description}
-                      ></img>
-                    </a>
-                    <div className="centerText">
-                      <span className="subsize">{project.language}</span>
-                      <div className="codelink bold centerText">
-                        <a
-                          target="_blank "
-                          href={`https://github.com/jqjacq/${project.link}`}
-                        >
-                          Code <i className="fa fa-github icons"></i>
-                        </a>
+            .map((project) => {
+              const imageSrc = images2022[`/src/assets/2022/${project.img}`]?.default;
+
+              return (
+                <SwiperSlide key={project.id}>
+                  <div className="project-grid" key={project.id} data-hash={project.hash}>
+                    <h5 className="bold centerText project-type">
+                      {project.fullname}
+                      <a
+                        target="_blank "
+                        className={`${project.className}`}
+                        href={`https://github.com/jqjacq/${project.link}`}
+                        alt="Website Link"
+                      >
+                        <img
+                          className="project-images"
+                          src={imageSrc}
+                          alt={project.name}
+                          title={project.description}
+                        ></img>
+                      </a>
+                      <div className="centerText">
+                        <span className="subsize">{project.language}</span>
+                        <div className="codelink bold centerText">
+                          <a target="_blank " href={`https://github.com/jqjacq/${project.link}`}>
+                            Code <i className="fa fa-github icons"></i>
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  </h5>
-                </div>
-              </SwiperSlide>
-            ))}
+                    </h5>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
         </Swiper>
       </div>
     </>

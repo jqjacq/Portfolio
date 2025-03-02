@@ -1,5 +1,6 @@
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
+import jqImage from "../assets/jq.jpg";
 
 const Home = () => {
   const greeting = useRef(null);
@@ -17,14 +18,7 @@ const Home = () => {
   }, []);
   useEffect(() => {
     const typed = new Typed(greeting.current, {
-      strings: [
-        "Hello.",
-        "¡Hola!",
-        "你好!",
-        "こんにちは!",
-        "안녕하세요!",
-        "Привет!",
-      ],
+      strings: ["Hello.", "¡Hola!", "你好!", "こんにちは!", "안녕하세요!", "Привет!"],
       typeSpeed: 100,
       backDelay: 1000,
       loop: true,
@@ -39,7 +33,7 @@ const Home = () => {
       <div>
         <div className="intro-background">
           <div className="intro-container containerPad">
-            <img className="jq" src="/img/jq.jpg" alt="Smiling with desserts" />
+            <img className="jq" src={jqImage} alt="Smiling with desserts" />
             <div className="intro w3-animate-opacity">
               <h1>
                 <header className="bold centerText  w3-animate-right">
@@ -52,7 +46,6 @@ const Home = () => {
                 I'm Jacqueline. 😊
                 <span className="intro nickname">
                   I go by
-                  {/* <img className="jqlogo" src={`${process.env.PUBLIC_URL}/img/jqlogo.png`} alt="JQ Logo" /> */}
                   <img className="jqlogo" src="/img/jqlogo.png" alt="JQ Logo" />
                 </span>
               </h2>
