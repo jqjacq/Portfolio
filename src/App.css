@@ -1,3 +1,8 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
@@ -26,6 +31,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.all-title {
+  padding: 1rem;
+  font-size: 3rem;
+}
+
 .project-container {
   margin: auto;
   display: grid;
@@ -34,12 +44,14 @@
   grid-template-columns: repeat(3, 1fr);
   padding: 1rem 2rem;
 }
+
 .project-container .project-grid {
   display: grid;
   -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
+  column-gap: 0.5rem;
   grid-template-columns: 1fr 1fr;
 }
+
 .project-container .project-grid .project-images {
   width: 100%;
   max-width: 300px;
@@ -48,6 +60,7 @@
   border-color: 1px solid black;
   margin: auto;
 }
+
 .transparent-container {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 20px;
@@ -59,6 +72,7 @@
   margin-right: 2rem;
   color: white;
 }
+
 .intro-background .intro-container .socialmedia:hover {
   opacity: 0.85;
   color: #ddafdd;
@@ -70,10 +84,12 @@
   .title {
     font-size: 1.25em;
   }
+
   .flower {
     display: none;
   }
 }
+
 @media only screen and (max-width: 696px) {
   .intro-container {
     font-size: 1rem;
@@ -81,35 +97,44 @@
     flex-direction: column;
     height: 0;
   }
+
   .intro-container .socialmedia {
     margin-right: 0.25rem;
     height: 25px;
     width: 25px;
   }
+
   .icons {
     width: 30px;
     height: 30px;
   }
+
   .nickname {
     display: none;
   }
+
   .project-images {
     width: 150px;
     height: 150px;
   }
+
   .project-container .subsize {
     display: none;
   }
+
   .project-container .codelink {
     font-size: 0.75rem;
   }
 }
+
 @media only screen and (max-width: 450px) {
+
   .socialmedia,
   .icons {
     width: 25px;
     height: 25px;
   }
+
   .project-container {
     grid-template-columns: repeat(2, 1fr);
   }

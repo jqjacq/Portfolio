@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
+import { Icon } from '@iconify/react';
+
 const Navbar = () => {
   const navList = [
-    { name: "Home", path: "/home" },
+    { name: "Home", path: "/home", icon: <Icon icon="mdi:home" width="24" height="24"  style={{color: "#75949f"}} /> },
     { name: "Recent Projects", path: "/recent-projects" },
     { name: "Past Projects", path: "/past-projects" },
     { name: "Certification & Education", path: "/certification-education" },
@@ -21,10 +23,12 @@ const Navbar = () => {
                 }`
               }
             >
+              {link.icon}
               {link.name}
             </NavLink>
           ))}
         </div>
+      
       </nav>
     </>
   );
