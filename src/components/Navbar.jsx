@@ -3,11 +3,11 @@ import { Icon } from '@iconify/react';
 
 const Navbar = () => {
   const navList = [
-    { name: "Home", path: "/home", icon: <Icon icon="mdi:home" width="24" height="24"  style={{color: "#75949f"}} /> },
-    { name: "Recent Projects", path: "/recent-projects" },
-    { name: "Past Projects", path: "/past-projects" },
-    { name: "Certification & Education", path: "/certification-education" },
-    { name: "Contact", path: "/contact" },
+    { name: "Home", path: "/home", icon: <Icon icon="line-md:home" width="50" height="50"  style={{color: "#0a66c2"}} />},
+    { name: "Recent Projects", path: "/recent-projects", icon: <Icon icon="line-md:clipboard-list" width="50" height="50" /> },
+    { name: "Past Projects", path: "/past-projects", icon: <Icon icon="line-md:folder-arrow-left" width="50" height="50" /> },
+    { name: "Certification & Education", path: "/certification-education", icon: <Icon icon="line-md:text-box-multiple" width="50" height="50" /> },
+    { name: "Contact", path: "/contact", icon: <Icon icon="line-md:account" width="50" height="50" /> },
   ];
   return (
     <>
@@ -23,8 +23,9 @@ const Navbar = () => {
                 }`
               }
             >
-              {link.icon}
               {link.name}
+              {link.icon}
+              
             </NavLink>
           ))}
         </div>

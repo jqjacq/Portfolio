@@ -33,7 +33,7 @@ const Contact = () => {
               target="popup"
               rel="noopener noreferrer"
               alt={contact.name}
-              className="text-center text-5xl block flex items-center col-span-1 row-span-1 card p-14 gap-1 xl:gap-8 "
+              className="text-center text-5xl block flex items-center col-span-1 row-span-1 card p-14 gap-1 xl:gap-8 border-3 rounded-lg w-125 hover:opacity-75 transition duration-300 ease-in-out active:font-extrabold"
             >
               {contact.icon}
               {contact.name}
