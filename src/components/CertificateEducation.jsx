@@ -2,13 +2,14 @@ import CMULogo from "../assets/CarnegieLogo.png";
 import CCNYLogo from "../assets/CCNYLogo.png";
 import AzureAI from "../assets/AzureAI.png";
 import AzureFundamental from "../assets/AzureFundamental.png";
+import GradientHr from "../utils/GradientHr";
 
 const CertificateEducation = () => {
   return (
     <>
-      <hr className="w-1/2 h-2 mx-auto bg-gradient-to-r from-blue-400 to-purple-400 my-5" />
+      <GradientHr />
       <header className="text-4xl m-5 font-bold"> Certifications </header>
-      <hr className="w-1/2 h-2 mx-auto bg-gradient-to-r from-blue-400 to-purple-400 my-5" />
+      <GradientHr />
 
       <div className="w-full h-full grid grid-cols-2 gap-2 md:place-items-center place-items-star">
         <div className="border-3 rounded-lg h-full flex flex-col place-content-center m-1 p-10">
@@ -41,9 +42,9 @@ const CertificateEducation = () => {
           </div>
         </div>
       </div>
-      <hr className="w-1/2 h-2 mx-auto bg-gradient-to-r from-blue-400 to-purple-400 my-5" />
+      <GradientHr />
       <header className="text-4xl m-5 font-bold"> Education </header>
-      <hr className="w-1/2 h-2 mx-auto bg-gradient-to-r from-blue-400 to-purple-400 my-5" />
+      <GradientHr />
       <div className="w-full h-full grid grid-cols-2 gap-2 md:place-items-center place-items-start">
         <div className="border-3 rounded-lg h-full flex flex-col place-content-center m-1 p-10">
           <img src={CMULogo} alt="CMU Logo" key="cmu-logo" />

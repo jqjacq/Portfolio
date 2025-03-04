@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ProjectSlider from "./ProjectSlider";
 import projectlist from "../data/projectslist.js";
+import GradientHr from "../utils/GradientHr.jsx";
 
 const PastProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -10,9 +11,9 @@ const PastProjects = () => {
 
   return (
     <>
-      <hr className="w-1/2 h-2 mx-auto bg-gradient-to-r from-blue-400 to-purple-400 my-5" />
+      <GradientHr />
       <header className="text-4xl m-5 font-bold"> Past Projects </header>
-      <hr className="w-1/2 h-2 mx-auto bg-gradient-to-r from-blue-400 to-purple-400 my-5" />
+      <GradientHr />
       <ProjectSlider year={2023} />
       <ProjectSlider year={2022} />
     </>

@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import GradientHr from "../utils/GradientHr";
 
 const Contact = () => {
   const contacts = [
@@ -25,9 +26,9 @@ const Contact = () => {
   ];
   return (
     <>
-      <hr className="w-1/2 h-2 mx-auto bg-gradient-to-r from-blue-400 to-purple-400 my-5" />
+      <GradientHr />
       <header className="text-4xl m-5 font-bold"> Contact </header>
-      <hr className="w-1/2 h-2 mx-auto bg-gradient-to-r from-blue-400 to-purple-400 my-5" />
+      <GradientHr />
       <div className="grid xl:grid-cols-2 xl:grid-rows-2 gap-10 md:place-items-center place-items-start">
         {contacts.map((contact) => (
           <a
