@@ -29,19 +29,24 @@ const Contact = () => {
       <GradientHr />
       <header className="text-4xl m-5 font-bold"> Contact </header>
       <GradientHr />
-      <div className="grid xl:grid-cols-2 xl:grid-rows-2 gap-10 md:place-items-center place-items-start">
-        {contacts.map((contact) => (
-          <a
-            href={contact.link}
-            target="popup"
-            rel="noopener noreferrer"
-            alt={contact.name}
-            className="text-center text-5xl block flex items-center col-span-1 row-span-1 card p-14 gap-1 xl:gap-8 border-3 rounded-lg w-125 hover:opacity-75 transition duration-300 ease-in-out active:font-extrabold"
-          >
-            {contact.icon}
-            {contact.name}
-          </a>
-        ))}
+
+      <br></br>
+      <div className="w-full h-full flex items-center justify-center">
+        <div className="grid xl:grid-cols-2 xl:grid-rows-2 gap-10 md:place-items-center place-items-start ">
+          {contacts.map((contact) => (
+            <a
+              key={contact.name}
+              href={contact.link}
+              target="popup"
+              rel="noopener noreferrer"
+              alt={contact.name}
+              className="text-center text-5xl block flex items-center col-span-1 row-span-1 card p-14 gap-1 xl:gap-8 border-3 rounded-lg w-125 hover:opacity-75 transition duration-300 ease-in-out active:font-extrabold"
+            >
+              {contact.icon}
+              <span className="ml-15">{contact.name}</span>
+            </a>
+          ))}
+        </div>
       </div>
     </>
   );
