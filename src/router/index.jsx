@@ -6,6 +6,7 @@ import Certification from "../components/CertificateEducation.jsx";
 import Contact from "../components/Contact.jsx";
 import ErrorPage from "../components/ErrorPage.jsx";
 import Layout from "../components/Layout.jsx";
+import Skills from "../components/Skills.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "home",
         element: <Home />,
+      },
+      {
+        path: "skills",
+        element: <Skills />,
       },
       {
         path: "recent-projects",

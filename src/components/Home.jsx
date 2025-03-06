@@ -35,17 +35,17 @@ const Home = () => {
       </header>
       <GradientHr />
 
-      <div className="text-2xl w-full h-full grid grid-cols-2 gap-2 md:place-items-center place-items-star m-10">
-        <div className="col-span-1 text-2xl m-8">
+      <div className="text-2xl w-full h-full grid grid-cols-2 md:place-items-center place-items-star m-10">
+        <div className="text-2xl m-8">
           <img
-            className="mx-auto rounded-full max-w-3/4 max-h-1/2 animate-pulse duration-2000"
+            className="mx-auto rounded-full max-w-3/4 animate-pulse duration-2000"
             src={jqImage}
             alt="Smiling with desserts"
           />
         </div>
 
         <div>
-          <div className="col-span-1 text-xl text-left">
+          <div className="text-xl text-left">
             <p className="m-5 text-center">
               <p className="m-3 text-2xl"> I'm Jacqueline. 😊 You can call me JQ! </p>
               <img className="jqlogo w-50 mx-auto" src={jqLogo} alt="JQ Logo" />
@@ -87,8 +87,6 @@ const Home = () => {
             </p>
           </div>
         </div>
-
-        <div className="col-span-2 text-2xl m-8">{/* <Skills /> */}</div>
       </div>
     </>
   );

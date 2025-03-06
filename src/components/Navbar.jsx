@@ -9,6 +9,11 @@ const Navbar = () => {
       icon: <Icon icon="line-md:home" width="50" height="50" style={{ color: "#0a66c2" }} />,
     },
     {
+      name: "Skills",
+      path: "/skills",
+      icon: <Icon icon="line-md:lightbulb" width="50" height="50" />,
+    },
+    {
       name: "Recent Projects",
       path: "/recent-projects",
       icon: <Icon icon="line-md:clipboard-list" width="50" height="50" />,
