@@ -39,8 +39,8 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               className={({ isActive }) =>
-                `flex flex-col items-center text-white transition-transform duration-300 ease-in-out hover:translate-x-1 hover:translate-y-1 font-extrabold ${
-                  isActive ? "active underline decoration" : ""
+                `flex flex-col items-center text-white transition-transform duration-300 ease-in-out hover:translate-x-1 hover:translate-y-1 active:font-extrabold ${
+                  isActive ? "active underline bold decoration  p-3 rounded-lg" : ""
                 }`
               }
             >

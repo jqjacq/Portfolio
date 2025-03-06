@@ -4,8 +4,6 @@ import jqImage from "../assets/jq.jpg";
 import jqLogo from "../assets/jqlogo.png";
 import GradientHr from "../utils/GradientHr";
 import useTypedEffect from "../hooks/useTypedEffect";
-// import Skills from "./Skills";
-// import Skills2 from "./Skills2";
 
 const Home = () => {
   const greeting = useRef(null);
