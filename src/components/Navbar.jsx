@@ -9,6 +9,11 @@ const Navbar = () => {
       icon: <Icon icon="line-md:home" width="50" height="50" style={{ color: "#0a66c2" }} />,
     },
     {
+      name: "Skills",
+      path: "/skills",
+      icon: <Icon icon="line-md:lightbulb" width="50" height="50" />,
+    },
+    {
       name: "Recent Projects",
       path: "/recent-projects",
       icon: <Icon icon="line-md:clipboard-list" width="50" height="50" />,
@@ -34,8 +39,8 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               className={({ isActive }) =>
-                `flex flex-col items-center text-white transition-transform duration-300 ease-in-out hover:translate-x-1 hover:translate-y-1 font-extrabold ${
-                  isActive ? "active underline decoration" : ""
+                `flex flex-col items-center text-white transition-transform duration-300 ease-in-out hover:translate-x-1 hover:translate-y-1 active:font-extrabold ${
+                  isActive ? "active underline bold decoration  p-3 rounded-lg" : ""
                 }`
               }
             >
