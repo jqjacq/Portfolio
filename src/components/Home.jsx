@@ -36,9 +36,10 @@ const Home = () => {
       <div className="text-2xl w-full h-full grid grid-cols-2 md:place-items-center place-items-star m-10">
         <div className="text-2xl m-8">
           <img
-            className="mx-auto rounded-full max-w-3/4 duration-2000 animate__animated animate__slideInLeft"
+            className="mx-auto rounded-full max-w-3/4 transition-transform duration-700 transform hover:translate-x-3"
             src={jqImage}
             alt="Smiling with desserts"
+            loading="lazy"
           />
         </div>
 
