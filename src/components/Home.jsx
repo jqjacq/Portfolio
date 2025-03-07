@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <>
       <GradientHr />
-      <header className="text-4xl m-5">
+      <header className="text-4xl m-5 animate__animated animate__fadeIn">
         <span ref={greeting} />
         👋
       </header>
@@ -36,14 +36,14 @@ const Home = () => {
       <div className="text-2xl w-full h-full grid grid-cols-2 md:place-items-center place-items-star m-10">
         <div className="text-2xl m-8">
           <img
-            className="mx-auto rounded-full max-w-3/4 animate-pulse duration-2000"
+            className="mx-auto rounded-full max-w-3/4 duration-2000 animate__animated animate__slideInLeft"
             src={jqImage}
             alt="Smiling with desserts"
           />
         </div>
 
         <div>
-          <div className="text-xl text-left">
+          <div className="text-xl text-left animate__animated animate__slideInRight">
             <p className="m-5 text-center">
               <p className="m-3 text-2xl"> I'm Jacqueline. 😊 You can call me JQ! </p>
               <img className="jqlogo w-50 mx-auto" src={jqLogo} alt="JQ Logo" />

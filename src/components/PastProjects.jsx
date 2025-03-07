@@ -29,10 +29,12 @@ const PastProjects = () => {
   return (
     <>
       <GradientHr />
-      <header className="text-4xl m-5 font-bold"> Past Projects </header>
+      <header className="text-4xl m-5 font-bold animate__animated animate__bounceIn"> Past Projects </header>
       <GradientHr />
-      <ProjectSlider year={2023} badge={Projectbadge2023} />
-      <ProjectSlider year={2022} badge={Projectbadge2022} />
+      <div className="animate__animated  animate__lightSpeedInLeft">
+        <ProjectSlider year={2023} badge={Projectbadge2023} />
+        <ProjectSlider year={2022} badge={Projectbadge2022} />
+      </div>
     </>
   );
 };

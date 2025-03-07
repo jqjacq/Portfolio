@@ -1,12 +1,13 @@
 import { Icon } from "@iconify/react";
 import GradientHr from "../utils/GradientHr";
+import Resume from "../assets/Jacqueline_Xu_Resume.pdf";
 
 const Contact = () => {
   const contacts = [
     {
       name: "Github",
       link: "https://www.github.com/jqjacq",
-      icon: <Icon icon="line-md:github-loop" width="100" height="100" style={{ color: "#75949f" }} />,
+      icon: <Icon icon="line-md:github-loop" width="100" height="100" />,
     },
     {
       name: "LinkedIn",
@@ -20,19 +21,19 @@ const Contact = () => {
     },
     {
       name: "Resume",
-      link: "../Res.pdf",
-      icon: <Icon icon="line-md:file" width="100" height="100" style={{ color: "#0a66c2" }} />,
+      link: Resume,
+      icon: <Icon icon="line-md:file" width="100" height="100" />,
     },
   ];
   return (
     <>
       <GradientHr />
-      <header className="text-4xl m-5 font-bold"> Contact </header>
+      <header className="text-4xl m-5 font-bold animate__animated animate__rubberBand"> Contact </header>
       <GradientHr />
 
       <br></br>
       <div className="w-full h-full flex items-center justify-center">
-        <div className="grid xl:grid-cols-2 xl:grid-rows-2 gap-10 md:place-items-center place-items-start">
+        <div className="grid xl:grid-cols-2 xl:grid-rows-2 gap-5 md:place-items-center place-items-start">
           {contacts.map((contact) => (
             <a
               key={contact.name}
@@ -40,10 +41,10 @@ const Contact = () => {
               target="popup"
               rel="noopener noreferrer"
               alt={contact.name}
-              className="text-center text-5xl block bg-gray-100 flex items-center col-span-1 row-span-1 card p-14 gap-1 xl:gap-8 border-3 rounded-lg w-125 hover:opacity-85 hover:translate-x-1 hover:translate-y-1 transition duration-300 hover:ease-in-out active:bg-gray-150"
+              className="text-center text-5xl block flex items-center col-span-1 row-span-1 card p-15 xl:gap-8 border-3 rounded-lg w-125 hover:opacity-85 hover:bg-teal-100 hover:translate-x-1 hover:translate-y-1 transition duration-300 hover:ease-in-out"
             >
               {contact.icon}
-              <span className="ml-15">{contact.name}</span>
+              <span className="ml-10">{contact.name}</span>
             </a>
           ))}
         </div>
