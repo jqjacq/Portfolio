@@ -12,12 +12,15 @@
   font-variation-settings:
     "width" 100;
 }
-
+body {
+  overflow-x: hidden;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  
 }
 
 :root {
@@ -28,6 +31,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+body {
+  height: 100vh;
+  background-image: url('src/assets/guillaume_galtier.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 a:hover {

@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Icon } from "@iconify/react";
+import TopPlane from "./Planes/TopPlane";
+import LeftPlane from "./Planes/LeftPlane";
 
 const Navbar = () => {
   const navList = [
@@ -32,6 +34,8 @@ const Navbar = () => {
   ];
   return (
     <>
+      <TopPlane />
+      <LeftPlane />
       <nav className="w-full flex-1 flex  justify-center items-center py-4 bg-transparent">
         <div className="w-full flex justify-evenly items-center">
           {navList.map((link) => (

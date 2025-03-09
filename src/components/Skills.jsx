@@ -6,9 +6,9 @@ import SkillIcon from "../utils/SkillIcons.jsx";
 
 const SkillsGrid = () => {
   return (
-    <div className="container mx-auto animate__animated  animate__fadeInUp">
+    <div className="container mx-auto animate__animated animate__bounceIn">
       <GradientHr />
-      <header className="text-4xl m-5 animate__animated animate__tada">Skills </header>
+      <header className="text-4xl m-5 animate__animated animate__bounceIn">Skills </header>
       <GradientHr />
 
       <div className="grid grid-cols-10 gap-3">

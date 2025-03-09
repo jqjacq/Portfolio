@@ -47,7 +47,7 @@ const Home = () => {
           <div className="text-xl text-left animate__animated animate__slideInRight">
             <p className="m-5 text-center">
               <p className="m-3 text-2xl"> I'm Jacqueline. 😊 You can call me JQ! </p>
-              <img className="jqlogo w-50 mx-auto" src={jqLogo} alt="JQ Logo" />
+              <img className="jqlogo w-50 h-30 mx-auto" src={jqLogo} alt="JQ Logo" />
               <p className="text-2xl m-3">
                 I'm a self-taught <span ref={code} />{" "}
               </p>

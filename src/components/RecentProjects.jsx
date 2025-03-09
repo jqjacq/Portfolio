@@ -12,7 +12,7 @@ const RecentProjects = () => {
         <ProjectBadge>{project.tools}</ProjectBadge>
         <div className="flex justify-center items-center">
           <a href={project.link} target="_blank" rel="noreferrer">
-            <img className="w-100" src={imageSrc} alt={project.name} />
+            <img className="w-100 h-50" src={imageSrc} alt={project.name} />
           </a>
         </div>
         <p className="p-5 underline decoration-sky-500"> {project.description} </p>

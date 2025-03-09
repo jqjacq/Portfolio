@@ -8,7 +8,7 @@ const CertificateEducation = () => {
   return (
     <>
       <GradientHr />
-      <header className="text-4xl m-5 font-bold animate__animated animate__headShake"> Education </header>
+      <header className="text-4xl m-5 font-bold animate__animated animate__bounceIn"> Education </header>
       <GradientHr />
 
       <div className="w-full h-full grid grid-cols-2 gap-2 md:place-items-center place-items-start animate__animated animate__zoomIn">
@@ -34,11 +34,11 @@ const CertificateEducation = () => {
         </div>
       </div>
       <GradientHr />
-      <header className="text-4xl m-5 font-bold animate__animated animate__headShake"> Certifications </header>
+      <header className="text-4xl m-5 font-bold animate__animated animate__bounceIn"> Certifications </header>
       <GradientHr />
 
-      <div className="w-full h-full grid grid-cols-2 gap-2 md:place-items-center place-items-star animate__animated animate__zoomIn">
-        <div className="border-3 rounded-lg bg-gray-100 h-full flex flex-col place-content-center m-1 p-10">
+      <div className="w-full h-full grid grid-cols-2 gap-2 md:place-items-center place-items-star animate__animated animate__zoomIn ">
+        <div className="border-3 rounded-lg bg-gray-100 h-full flex flex-col place-content-center m-1 p-10 ">
           <div className="h-full flex flex-col place-content-center m-10 hover:translate-x-1 hover:translate-y-1 transition duration-300 hover:ease-in-out">
             <a
               href="https://learn.microsoft.com/api/credentials/share/en-us/jqjqjq/F0534D4E19D12238?sharingId=BB0DACDD4272677D"
