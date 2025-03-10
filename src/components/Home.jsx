@@ -43,7 +43,7 @@ const Home = () => {
           />
         </div>
 
-        <div>
+        <div className="w-full h-full border-3 rounded-lg bg-gray-100 m-1 p-10 md:place-items-center place-items-start">
           <div className="text-xl text-left animate__animated animate__slideInRight">
             <p className="m-5 text-center">
               <p className="m-3 text-2xl"> I'm Jacqueline. 😊 You can call me JQ! </p>

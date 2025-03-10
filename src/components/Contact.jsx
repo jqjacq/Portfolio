@@ -41,7 +41,7 @@ const Contact = () => {
               target="popup"
               rel="noopener noreferrer"
               alt={contact.name}
-              className="border-3 rounded-lg bg-gray-100 text-center text-5xl block flex items-center col-span-1 row-span-1 card p-15 xl:gap-8 border-3 rounded-lg w-125 hover:opacity-85 hover:bg-gray-200 hover:translate-x-1 hover:translate-y-1 transition duration-300 hover:ease-in-out"
+              className="border-3 rounded-lg bg-gray-100 text-center text-5xl block flex items-center col-span-1 row-span-1 card p-18 xl:gap-8 border-3 rounded-lg w-125 hover:opacity-85 hover:bg-gray-200 hover:translate-x-1 hover:translate-y-1 transition duration-300 hover:ease-in-out"
             >
               {contact.icon}
               <span className="ml-10">{contact.name}</span>
@@ -49,8 +49,6 @@ const Contact = () => {
           ))}
         </div>
       </div>
-      <br></br>
-      <br></br>
     </>
   );
 };

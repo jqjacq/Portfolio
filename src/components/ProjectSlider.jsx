@@ -13,8 +13,8 @@ import ProjectButton from "../utils/ProjectButton.jsx";
 const ProjectSlider = ({ year, badge }) => {
   const filteredYearProjects = data.filter((project) => project.year === year);
   return (
-    <div className="border-3 rounded-lg bg-gray-100 p-5 rounded-md m-4">
-      <p className="!font-bold"> {year} Projects</p>
+    <div className="border-3 rounded-lg bg-gray-100 rounded-md m-2">
+      <p className="!font-bold mt-5"> {year} Projects</p>
       <span> {badge} </span>
       <Swiper
         navigation={true}
@@ -27,7 +27,7 @@ const ProjectSlider = ({ year, badge }) => {
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination, Navigation, HashNavigation]}
+        modules={[EffectCoverflow, Pagination, Navigation, HashNavigation]}
         className="mySwiper"
       >
         {filteredYearProjects.map((project) => {
@@ -95,7 +95,6 @@ const ProjectSlider = ({ year, badge }) => {
             </SwiperSlide>
           );
         })}
-        <br></br>
       </Swiper>
     </div>
   );

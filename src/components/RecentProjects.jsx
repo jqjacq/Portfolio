@@ -7,7 +7,10 @@ const RecentProjects = () => {
     const imageSrc = `/src/assets/recent/${project.img}`;
 
     return (
-      <div key={project.id} className="recentproject p-5">
+      <div
+        key={project.id}
+        className="recentproject w-1/2 h-full border-3 rounded-lg bg-gray-100 m-1 p-3 md:place-items-center place-items-start border-3 rounded-lg bg-gray-100"
+      >
         <h2 className="!font-bold underline decoration-sky-500">{project.name}</h2>
         <ProjectBadge>{project.tools}</ProjectBadge>
         <div className="flex justify-center items-center">
@@ -25,7 +28,7 @@ const RecentProjects = () => {
       <header className="text-4xl m-5 font-bold animate__animated animate__bounceIn"> Recent Projects </header>
       <GradientHr />
 
-      <div className="w-full h-full grid grid-cols-1 gap-2 md:place-items-center place-items-star">
+      <div className="w-full h-full grid grid-cols-1 gap-2 md:place-items-center place-items-start">
         {RecentProjects}
       </div>
     </div>

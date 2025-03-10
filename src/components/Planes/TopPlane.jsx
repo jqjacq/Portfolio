@@ -8,7 +8,7 @@ const TopPlane = () => {
         width="50"
         height="50"
         viewBox="0 0 24 24"
-        initial={{ x: 1280, scaleX: -1 }}
+        initial={{ x: 1350, scaleX: -1 }}
         style={{ position: "absolute" }}
         animate={{
           x: [1350, -300],
@@ -21,7 +21,7 @@ const TopPlane = () => {
           repeatType: "loop",
           ease: "easeInOut",
           times: [0.25, 0.5, 0.75, 1],
-          delay: 1.5,
+          delay: 1,
         }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" stroke="#000000">

@@ -21,7 +21,7 @@ const BottomRightPlane = () => {
           repeatType: "loop",
           ease: "easeInOut",
           times: [0, 0.5, 1],
-          delay: 2,
+          delay: 3,
         }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" stroke="#000000">
