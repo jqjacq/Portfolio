@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import ProjectSlider from "./ProjectSlider";
-import projectlist from "../data/projectslist.js";
-import GradientHr from "../utils/GradientHr.jsx";
-import ProjectBadge from "../utils/ProjectBadge.jsx";
+import ProjectSlider from "../Projects/ProjectSlider.jsx";
+import projectlist from "../../data/projectslist.js";
+import GradientHr from "../../utils/GradientHr.jsx";
+import ProjectBadge from "../../utils/ProjectBadge.jsx";
 
 const PastProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -11,14 +11,11 @@ const PastProjects = () => {
   }, []);
 
   const Projectbadge2023 = [
-    <ProjectBadge key="python">Python</ProjectBadge>,
     <ProjectBadge key="react">React</ProjectBadge>,
+    <ProjectBadge key="python">Python</ProjectBadge>,
     <ProjectBadge key="materialui">MaterialUI</ProjectBadge>,
     <ProjectBadge key="bootstrap">Bootstrap</ProjectBadge>,
     <ProjectBadge key="sass">SASS</ProjectBadge>,
-    <ProjectBadge key="html">HTML</ProjectBadge>,
-    <ProjectBadge key="css">CSS</ProjectBadge>,
-    <ProjectBadge key="javascript">JavaScript</ProjectBadge>,
   ];
 
   const Projectbadge2022 = [
@@ -30,9 +27,9 @@ const PastProjects = () => {
     <>
       <div>
         <GradientHr />
-        <header className="text-4xl m-5 font-bold animate__animated animate__bounceIn"> Past Projects </header>
+        <header className="text-xl md:text-4xl m-5 font-bold animate__animated animate__bounceIn">Past Projects</header>
         <GradientHr />
-        <div className="animate__animated  animate__lightSpeedInLeft">
+        <div className="grid grid-cols-1 md:grid-cols-2 animate__animated  animate__lightSpeedInLeft">
           <ProjectSlider year={2023} badge={Projectbadge2023} />
           <ProjectSlider year={2022} badge={Projectbadge2022} />
         </div>

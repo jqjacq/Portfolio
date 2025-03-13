@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const RightPlane = () => {
   return (
-    <div>
+    <div className="absolute">
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         width="50"

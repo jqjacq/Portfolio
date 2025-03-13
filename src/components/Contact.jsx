@@ -28,12 +28,12 @@ const Contact = () => {
   return (
     <>
       <GradientHr />
-      <header className="text-4xl m-5 font-bold animate__animated animate__bounceIn"> Contact </header>
+      <header className="text-xl md:text-4xl m-5 font-bold animate__animated animate__bounceIn"> Contact </header>
       <GradientHr />
 
       <br></br>
       <div className="w-full h-full flex items-center justify-center">
-        <div className="grid xl:grid-cols-2 xl:grid-rows-2 gap-5 md:place-items-center place-items-start">
+        <div className="grid grid-cols-1 xl:grid-cols-2  gap-5 place-items-center ">
           {contacts.map((contact) => (
             <a
               key={contact.name}
@@ -41,7 +41,8 @@ const Contact = () => {
               target="popup"
               rel="noopener noreferrer"
               alt={contact.name}
-              className="border-3 rounded-lg bg-gray-100 text-center text-5xl block flex items-center col-span-1 row-span-1 card p-18 xl:gap-8 border-3 rounded-lg w-125 hover:opacity-85 hover:bg-gray-200 hover:translate-x-1 hover:translate-y-1 transition duration-300 hover:ease-in-out"
+              className="border-3 rounded-lg bg-gray-100 block flex items-center card hover:opacity-85 hover:bg-gray-200 hover:translate-x-1 hover:translate-y-1 transition duration-300 hover:ease-in-out p-5 text-2xl w-75
+              md:p-18 md:text-5xl  md:w-125"
             >
               {contact.icon}
               <span className="ml-10">{contact.name}</span>

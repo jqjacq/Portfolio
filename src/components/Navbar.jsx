@@ -8,47 +8,48 @@ const Navbar = () => {
     {
       name: "Home",
       path: "/home",
-      icon: <Icon icon="line-md:home" width="50" height="50" style={{ color: "#0a66c2" }} />,
+      icon: <Icon className="m-2 w-10 h-10 md:w-15 md:h-15" icon="line-md:home" width="50" height="50" />,
     },
     {
       name: "Skills",
       path: "/skills",
-      icon: <Icon icon="line-md:lightbulb" width="50" height="50" />,
+      icon: <Icon className="m-2 w-10 h-10 md:w-15 md:h-15" icon="line-md:lightbulb" width="50" height="50" />,
     },
     {
-      name: "Recent Projects",
-      path: "/recent-projects",
-      icon: <Icon icon="line-md:clipboard-list" width="50" height="50" />,
+      name: "Projects",
+      path: "/projects",
+      icon: <Icon className="m-2 w-10 h-10 md:w-15 md:h-15" icon="line-md:clipboard-list" width="50" height="50" />,
     },
     {
-      name: "Past Projects",
-      path: "/past-projects",
-      icon: <Icon icon="line-md:folder-arrow-left" width="50" height="50" />,
-    },
-    {
-      name: "Certification & Education",
+      name: "Education",
       path: "/certification-education",
-      icon: <Icon icon="line-md:text-box-multiple" width="50" height="50" />,
+      icon: <Icon className="m-2 w-10 h-10 md:w-15 md:h-15" icon="line-md:text-box-multiple" width="50" height="50" />,
     },
-    { name: "Contact", path: "/contact", icon: <Icon icon="line-md:account" width="50" height="50" /> },
+    {
+      name: "Contact",
+      path: "/contact",
+      icon: <Icon className="m-2 w-10 h-10 md:w-15 md:h-15" icon="line-md:account" width="50" height="50" />,
+    },
   ];
   return (
     <>
       <TopPlane />
       <LeftPlane />
-      <nav className="w-full flex-1 flex  justify-center items-center py-4 bg-transparent">
-        <div className="w-full flex justify-evenly items-center">
+      <nav className=" w-full flex-1 flex  justify-center items-center md:py-3 bg-purple-100 md:bg-transparent fixed bottom-0 left-0 md:static z-1000">
+        <div className="m-0 md:m-5 w-full flex justify-evenly items-center text-sm md:text-lg">
           {navList.map((link) => (
             <NavLink
               key={link.path}
               to={link.path}
               className={({ isActive }) =>
-                `flex flex-col items-center text-white transition-transform duration-300 ease-in-out hover:translate-x-1 hover:translate-y-1  ${
-                  isActive ? "!font-bold underline decoration shadow-md p-3 rounded-lg" : ""
+                `flex flex-col w-full items-center text-white transition-transform duration-300 ease-in-out hover:translate-x-1 hover:translate-y-1  ${
+                  isActive
+                    ? "bg-purple-200 !font-bold underline decoration md:p-3 md:rounded-lg md:bg-transparent md:shadow-lg"
+                    : ""
                 }`
               }
             >
-              {link.name}
+              <span className="pt-3">{link.name}</span>
               {link.icon}
             </NavLink>
           ))}
