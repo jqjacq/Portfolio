@@ -4,10 +4,10 @@ import PastProjects from "./PastProjects";
 
 const Projects = () => {
   return (
-    <div className="min-h-screen">
+    <>
       <RecentProjects />
       <PastProjects />
-    </div>
+    </>
   );
 };
 

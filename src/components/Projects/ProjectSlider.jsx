@@ -7,7 +7,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./swiper.css";
 import data from "../../data/projectslist.js";
-import ProjectBadge from "../../utils/ProjectBadge.jsx";
 import ProjectButton from "../../utils/ProjectButton.jsx";
 
 const ProjectSlider = ({ year, badge }) => {
@@ -22,9 +21,8 @@ const ProjectSlider = ({ year, badge }) => {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={1}
-        md:slidesPerView={3}
         initialSlide={2}
-        lazy={true}
+        lazy={"true"}
         pagination={{
           clickable: true,
         }}
@@ -41,9 +39,6 @@ const ProjectSlider = ({ year, badge }) => {
               <div>
                 {project.fullname}
                 <a target="_blank " className={`${project.className}`} href={projectLink} alt="Website Link">
-                  <ProjectBadge>
-                    <span className="text-xs">{project.language}</span>
-                  </ProjectBadge>
                   <img
                     className="rounded-xl w-50 h-30 mx-auto hover:opacity-75 hover:shadow-lg
                     active:border-2 active:border-gray-500"

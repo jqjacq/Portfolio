@@ -5,7 +5,7 @@ const Icons = ({ skills }) => {
     <>
       {skills.map((skill) => (
         <div className="flex flex-col justify-center items-center " key={skill.name}>
-          <Icon icon={skill.icon} width={50} height={50} />
+          <Icon icon={skill.icon} className="w-10 md:w-15" width={50} height={50} />
           <p className="text-center text-xs mt-2">{skill.name}</p>
         </div>
       ))}

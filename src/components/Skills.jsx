@@ -10,11 +10,11 @@ const SkillsGrid = () => {
       <header className="text-xl md:text-4xl m-5 animate__animated animate__bounceIn">Skills </header>
       <GradientHr />
 
-      <div className="grid grid-cols-10 md:grid-cols-2 gap-3">
-        <div className="col-span-5 grid grid-rows-2 gap-3">
+      <div className="grid md:grid-cols-2 gap-3">
+        <div className="col-span-10 grid grid-rows-1 gap-3 md:grid-rows-2  md:col-span-4">
           <div className="border-3 rounded-lg bg-gray-100 p-3">
             <h2 className="text-md md:text-2xl mb-4 underline decoration-sky-500">Languages</h2>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 gap-2 md:gap-4">
               <SkillIcon skills={allskills[0].skills} />
             </div>
           </div>
@@ -27,10 +27,10 @@ const SkillsGrid = () => {
           </div>
         </div>
 
-        <div className="col-span-5">
+        <div className="col-span-10 md:col-span-6">
           <div className="border-3 rounded-lg bg-gray-100 p-3 md:pt-15 md:pb-16">
             <h2 className="text-md md:text-2xl mb-4 underline decoration-sky-500">Web Development</h2>
-            <div className="grid grid-row-2 grid-cols-5 gap-4">
+            <div className="grid grid-row-2 grid-cols-4 md:grid-cols-5 gap-2 md:gap-4">
               <SkillIcon skills={allskills[1].skills} />
             </div>
           </div>
@@ -40,7 +40,7 @@ const SkillsGrid = () => {
           <div className="col-span-10">
             <div className="border-3 rounded-lg bg-gray-100 p-3 ">
               <h2 className="text-md md:text-2xl mb-4 underline decoration-sky-500">DevOps</h2>
-              <div className="grid grid-cols-6 gap-4">
+              <div className="grid grid-cols-3 md:grid-cols-6 gap-2 md:gap-4">
                 <SkillIcon skills={allskills[3].skills} />
               </div>
             </div>
@@ -49,7 +49,7 @@ const SkillsGrid = () => {
           <div className="col-span-10">
             <div className="border-3 rounded-lg bg-gray-100 p-5">
               <h2 className="text-xl md:text-lg mb-4 underline decoration-sky-500">Tools & Technologies</h2>
-              <div className="grid grid-rows-1 grid-cols-7 gap-4">
+              <div className="grid grid-rows-1 grid-cols-4 md:grid-cols-7 gap-2 md:gap-4">
                 <SkillIcon skills={allskills[4].skills} />
               </div>
             </div>

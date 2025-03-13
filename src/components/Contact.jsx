@@ -33,7 +33,7 @@ const Contact = () => {
 
       <br></br>
       <div className="w-full h-full flex items-center justify-center">
-        <div className="grid grid-cols-1 xl:grid-cols-2  gap-5 place-items-center ">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 place-items-center">
           {contacts.map((contact) => (
             <a
               key={contact.name}
@@ -41,8 +41,8 @@ const Contact = () => {
               target="popup"
               rel="noopener noreferrer"
               alt={contact.name}
-              className="border-3 rounded-lg bg-gray-100 block flex items-center card hover:opacity-85 hover:bg-gray-200 hover:translate-x-1 hover:translate-y-1 transition duration-300 hover:ease-in-out p-5 text-2xl w-75
-              md:p-18 md:text-5xl  md:w-125"
+              className="border-3 rounded-lg bg-gray-100 block flex items-center card hover:opacity-85 hover:bg-gray-200 hover:translate-x-1 hover:translate-y-1 transition duration-300 hover:ease-in-out p-15 text-2xl w-75
+              md:text-5xl md:w-125"
             >
               {contact.icon}
               <span className="ml-10">{contact.name}</span>
