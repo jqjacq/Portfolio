@@ -30,9 +30,7 @@ const RecentProjects = () => {
       <header className="text-xl md:text-4xl m-5 font-bold animate__animated animate__bounceIn">Recent Projects</header>
       <GradientHr />
 
-      <div className="w-full h-full grid grid-cols-1 gap-2 md:grid-cols-2 place-items-center animate__animated  animate__lightSpeedInRight">
-        {RecentProjects}
-      </div>
+      <div className="w-full h-full grid grid-cols-1 gap-2 md:grid-cols-2 place-items-center">{RecentProjects}</div>
     </div>
   );
 };

@@ -29,7 +29,7 @@ const PastProjects = () => {
         <GradientHr />
         <header className="text-xl md:text-4xl m-5 font-bold animate__animated animate__bounceIn">Past Projects</header>
         <GradientHr />
-        <div className="grid grid-cols-1 md:grid-cols-2 animate__animated  animate__lightSpeedInLeft">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           <ProjectSlider year={2023} badge={Projectbadge2023} />
           <ProjectSlider year={2022} badge={Projectbadge2022} />
         </div>
