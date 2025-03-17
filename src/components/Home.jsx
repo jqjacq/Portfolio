@@ -38,7 +38,7 @@ const Home = () => {
       <div className="text-2xl w-full h-full grid grid-cols-1 md:grid-cols-2 md:place-items-center place-items-start md:m-10">
         <div className="text-2xl md:m-8">
           <img
-            className="mx-auto rounded-full md:block w-3/4 h-3/4 md:w-full md:h-full transition-transform duration-700 transform hover:translate-x-3"
+            className="mx-auto rounded-full md:block w-3/4 h-3/4 md:w-full md:h-full transition-transform transform hover:translate-x-2"
             src={jqImage}
             alt="Smiling with desserts"
             loading="lazy"
@@ -48,7 +48,7 @@ const Home = () => {
           <div className="text-sm md:text-lg lg:text-xl  animate__animated animate__slideInRight">
             <p className="text-center">
               <span className="md:text-lg lg:text-2xl "> I'm Jacqueline. 😊 You can call me JQ! </span>
-              <img className="jqlogo w-30 h-20 md:w-50 md:h-30 mx-auto" src={jqLogo} alt="JQ Logo" />
+              <img className="jqlogo w-30 h-20 md:w-50 md:h-30 mx-auto" src={jqLogo} alt="JQ Logo" loading="lazy" />
             </p>
             <p>
               👩🏻‍💻 <span className="bg-sky-200">Coding is like solving puzzles— I ❤️ puzzles!</span>

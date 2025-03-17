@@ -17,6 +17,7 @@ const RecentProjects = () => {
                     active:border-2 active:border-gray-500"
               src={imageSrc}
               alt={project.name}
+              loading="lazy"
             />
           </a>
         </div>

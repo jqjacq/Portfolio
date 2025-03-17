@@ -19,14 +19,14 @@ const CertificateEducation = () => {
             rel="noopener noreferrer"
             className="hover:opacity-75 hover:italic transition duration-300 ease-in-out active:font-extrabold"
           >
-            <img src={CMULogo} className="w-1/2 md:w-full mx-auto" alt="CMU Logo" key="cmu-logo" />
+            <img src={CMULogo} className="w-1/2 md:w-full mx-auto" alt="CMU Logo" key="cmu-logo" loading="lazy" />
           </a>
           <p className="text-sm md:text-l !font-bold"> Carnegie Mellon Techbridge </p>
           <h3 className="text-sm md:text-l m-1">September 2024 - February 2025 </h3>
         </div>
 
         <div className="border-3 rounded-lg bg-gray-100  flex flex-col place-content-center m-1 p-5 h-50 md:h-80">
-          <img src={CCNYLogo} className="w-1/2 md:w-full mx-auto" alt="CCNY Logo" key="ccny-logo" />
+          <img src={CCNYLogo} className="w-1/2 md:w-full mx-auto" alt="CCNY Logo" key="ccny-logo" loading="lazy" />
           <p className="text-sm md:text-l !font-bold">Bachelor's Degree in Psychology</p>
           <h3 className="text-sm md:text-l m-1"> February 2017 </h3>
         </div>
@@ -47,7 +47,7 @@ const CertificateEducation = () => {
               rel="noopener noreferrer"
               className="hover:opacity-75 hover:italic transition duration-300 ease-in-out active:font-extrabold"
             >
-              <img src={AzureAI} alt="Azure AI" key="azure-ai" className="m-3 w-1/2 md:w-7/8 mx-auto" />
+              <img src={AzureAI} alt="Azure AI" key="azure-ai" className="m-3 w-1/2 md:w-7/8 mx-auto" loading="lazy" />
             </a>
             <p className="text-sm md:text-l !font-bold">AI900 - Azure AI Fundamentals</p>
             <h3 className="text-sm md:text-l m-1"> September 2023 </h3>
