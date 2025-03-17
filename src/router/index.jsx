@@ -1,7 +1,8 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import Home from "../components/Home.jsx";
-import RecentProjects from "../components/RecentProjects.jsx";
-import PastProjects from "../components/PastProjects.jsx";
+import Projects from "../components/Projects/Projects.jsx";
+// import RecentProjects from "../components/Projects/RecentProjects.jsx";
+// import PastProjects from "../components/Projects/PastProjects.jsx";
 import Certification from "../components/CertificateEducation.jsx";
 import Contact from "../components/Contact.jsx";
 import ErrorPage from "../components/ErrorPage.jsx";
@@ -27,13 +28,17 @@ export const router = createBrowserRouter([
         element: <Skills />,
       },
       {
-        path: "recent-projects",
-        element: <RecentProjects />,
+        path: "projects",
+        element: <Projects />,
       },
-      {
-        path: "past-projects",
-        element: <PastProjects />,
-      },
+      // {
+      //   path: "recent-projects",
+      //   element: <RecentProjects />,
+      // },
+      // {
+      //   path: "past-projects",
+      //   element: <PastProjects />,
+      // },
       {
         path: "certification-education",
         element: <Certification />,

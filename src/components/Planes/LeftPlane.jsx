@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 
 const LeftPlane = () => {
   return (
-    <div>
+    <div className="absolute">
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         width="50"
         height="50"
         viewBox="0 0 24 24"
-        initial={{ x: -300, scaleX: 1 }}
+        initial={{ x: "-15vw", scaleX: 1 }}
         animate={{
-          x: [-300, 1500],
+          x: ["-15vw", "70vw"],
           scaleX: [1],
         }}
         transition={{
