@@ -8,10 +8,9 @@ const BottomPlane = () => {
         width="60"
         height="60"
         viewBox="0 0 24 24"
-        initial={{ x: -300, scaleX: 1 }}
-        style={{ position: "absolute" }}
+        initial={{ x: "-15vw", scaleX: 1 }}
         animate={{
-          x: [-300, 1500],
+          x: ["-15vw", "70vw"],
           y: [0],
           scaleX: [1],
         }}

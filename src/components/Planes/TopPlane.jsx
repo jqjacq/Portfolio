@@ -8,10 +8,9 @@ const TopPlane = () => {
         width="50"
         height="50"
         viewBox="0 0 24 24"
-        initial={{ x: 1350, scaleX: -1 }}
-        style={{ position: "absolute" }}
+        initial={{ x: "70vw", scaleX: -1 }}
         animate={{
-          x: [1350, -300],
+          x: ["70vw", "-15vw"],
           y: [10],
           scaleX: [-1],
         }}

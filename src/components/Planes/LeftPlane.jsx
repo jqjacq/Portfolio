@@ -8,9 +8,9 @@ const LeftPlane = () => {
         width="50"
         height="50"
         viewBox="0 0 24 24"
-        initial={{ x: -300, scaleX: 1 }}
+        initial={{ x: "-15vw", scaleX: 1 }}
         animate={{
-          x: [-300, 1500],
+          x: ["-15vw", "70vw"],
           scaleX: [1],
         }}
         transition={{

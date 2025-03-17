@@ -41,7 +41,7 @@ const Contact = () => {
               target="popup"
               rel="noopener noreferrer"
               alt={contact.name}
-              className="border-3 rounded-lg bg-gray-100 block flex items-center card hover:opacity-85 hover:bg-gray-200 hover:translate-x-1 hover:translate-y-1 transition duration-300 hover:ease-in-out p-15 text-2xl w-75
+              className="border-3 rounded-lg bg-gray-100 block flex items-center card hover:opacity-85 hover:bg-gray-200 hover:translate-x-1 hover:translate-y-1 transition duration-300 hover:ease-in-out p-5 md:p-15 text-2xl w-75
               md:text-5xl md:w-125"
             >
               {contact.icon}
