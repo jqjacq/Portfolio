@@ -41,15 +41,10 @@ jobs:
       - name: Building and deploy to AWS S3 bucket 
         run: |
           if aws s3 ls "s3://$S3_BUCKET_NAME" 2>&1; then
-          
               echo "Bucket $S3_BUCKET_NAME exists already!"
-              
           else
               echo "Bucket $S3_BUCKET_NAME does not exist. Creating..."
-              
               aws s3 mb s3://$S3_BUCKET_NAME --region $AWS_REGION
-              aws s3 website s3://$S3_BUCKET_NAME/ --index-document index.html
-        
               aws s3api put-public-access-block \ 
               --bucket "$S3_BUCKET_NAME" \
               --public-access-block-configuration '{
@@ -58,7 +53,7 @@ jobs:
                   "BlockPublicPolicy": false,
                   "RestrictPublicBuckets": false
               }'
-              
+              aws s3 website s3://$S3_BUCKET_NAME/ --index-document index.html
               aws s3api put-bucket-policy --bucket $S3_BUCKET_NAME --policy file://ci_cd/s3-public-policy.json
           fi
           
