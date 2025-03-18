@@ -8,7 +8,7 @@ on:
       - master
 
 env:
-  S3_BUCKET_NAME="jqjacq.dev"
+  S3_BUCKET_NAME:"jqjacq.dev"
   
 jobs:
   build-frontend:
