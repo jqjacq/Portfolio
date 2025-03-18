@@ -3,7 +3,7 @@ import recentlist from "../../data/recentlist";
 import ProjectBadge from "../../utils/ProjectBadge";
 
 const RecentProjects = () => {
-  const RecentProjects = recentlist.map((project) => {
+  const RecentListProjects = recentlist.map((project) => {
     const imageSrc = `/src/assets/recent/${project.img}`;
 
     return (
@@ -31,7 +31,7 @@ const RecentProjects = () => {
       <header className="text-xl md:text-4xl m-5 font-bold animate__animated animate__bounceIn">Recent Projects</header>
       <GradientHr />
 
-      <div className="w-full h-full grid grid-cols-1 gap-2 md:grid-cols-2 place-items-center">{RecentProjects}</div>
+      <div className="w-full h-full grid grid-cols-1 gap-2 md:grid-cols-2 place-items-center">{RecentListProjects}</div>
     </div>
   );
 };
