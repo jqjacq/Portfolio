@@ -1,0 +1,60 @@
+# 📁 Jacqueline's Portfolio
+
+name: Portfolio Pipeline
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+  
+jobs:
+  build-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check code from Github
+        uses: actions/checkout@v3
+
+      - name: Installing Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          
+      - name: Install necessary npm dependencies
+        run: |
+          npm install
+
+      - name: Compile and bundle frontend portfolio for production.
+        run: |
+          npm run build
+          
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Building and deploy to AWS S3 bucket 
+        run: |
+          if aws s3 ls "s3://$S3_BUCKET_NAME" 2>&1; then
+              echo "Bucket $S3_BUCKET_NAME exists already!"
+          else
+              echo "Bucket $S3_BUCKET_NAME does not exist. Creating..."
+              aws s3 mb s3://$S3_BUCKET_NAME --region $AWS_REGION
+              aws s3api put-public-access-block \ 
+              --bucket "$S3_BUCKET_NAME" \
+              --public-access-block-configuration '{
+                  "BlockPublicAcls": true,
+                  "IgnorePublicAcls": true,
+                  "BlockPublicPolicy": false,
+                  "RestrictPublicBuckets": false
+              }'
+              aws s3 website s3://$S3_BUCKET_NAME/ --index-document index.html
+              aws s3api put-bucket-policy --bucket $S3_BUCKET_NAME --policy file://ci_cd/s3-public-policy.json
+          fi
+          
+          aws s3 sync dist/ s3://$S3_BUCKET_NAME --delete
