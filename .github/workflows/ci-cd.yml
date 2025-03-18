@@ -11,7 +11,7 @@ env:
   S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
   
 jobs:
-  build-frontend:
+  build-project:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,12 +25,10 @@ jobs:
           
       - name: Install necessary npm dependencies
         run: |
-          cd frontend
           npm install
 
       - name: Compile and bundle frontend portfolio for production.
         run: |
-          cd frontend
           npm run build
           
       - name: Set up AWS CLI
