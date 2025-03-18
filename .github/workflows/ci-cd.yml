@@ -8,7 +8,7 @@ on:
       - master
 
 env:
-  S3_BUCKET_NAME:"jqjacq.dev"
+  S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
   
 jobs:
   build-frontend:
@@ -40,7 +40,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Building and creating AWS S3 bucket 
+      - name: Building and deploy to AWS S3 bucket 
         run: |
           if aws s3 ls "s3://$S3_BUCKET_NAME" 2>&1; then
           
