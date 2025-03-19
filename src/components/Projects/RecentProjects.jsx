@@ -7,9 +7,24 @@ const RecentProjects = () => {
     const imageSrc = `/projects/recent/${project.img}`;
 
     return (
-      <div key={project.id} className="w-full h-full border-3 rounded-lg bg-gray-100 md:m-1 md: p-3 place-items-center">
-        <h2 className="!font-bold">{project.name}</h2>
-        <ProjectBadge>{project.tools}</ProjectBadge>
+      <div
+        key={project.id}
+        className="w-full h-full border-3 rounded-lg bg-gray-100 md:m-1 md: p-3 place-items-center text-left"
+      >
+        <h2 className="!font-bold m-1">{project.name}</h2>
+
+        <ProjectBadge>
+          <span className="!font-bold text-sm m-3"> ☁️ Cloud : </span>
+          {project.cloud}
+        </ProjectBadge>
+
+        <br />
+
+        <ProjectBadge>
+          <span className="!font-bold text-sm m-3"> 🔨 Tools : </span>
+          {project.tools}
+        </ProjectBadge>
+
         <div className="flex justify-center items-center">
           <a href={project.link} target="_blank" rel="noreferrer">
             <img
