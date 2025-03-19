@@ -4,7 +4,7 @@ import ProjectBadge from "../../utils/ProjectBadge";
 
 const RecentProjects = () => {
   const RecentListProjects = recentlist.map((project) => {
-    const imageSrc = `/src/assets/recent/${project.img}`;
+    const imageSrc = `/projects/recent/${project.img}`;
 
     return (
       <div key={project.id} className="w-full h-full border-3 rounded-lg bg-gray-100 md:m-1 md: p-3 place-items-center">

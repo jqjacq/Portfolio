@@ -35,7 +35,7 @@ const Home = () => {
       <p className="relative hidden md:block md:text-md lg:text-xl">
         I'm a self-taught <span ref={code} />
       </p>
-      <div className="text-2xl w-full h-full grid grid-cols-1 md:grid-cols-2 md:place-items-center place-items-start md:m-10">
+      <div className="text-2xl w-full h-full grid grid-cols-1 md:grid-cols-2 md:place-items-center place-items-start m-3 md:m-10">
         <div className="text-2xl md:m-8">
           <img
             className="mx-auto rounded-full md:block w-3/4 h-3/4 md:w-full md:h-full transition-transform transform hover:translate-x-2"
@@ -44,8 +44,8 @@ const Home = () => {
             loading="lazy"
           />
         </div>
-        <div className="w-full flex items-center justify-center border-3 rounded-lg bg-gray-100 md:m-1 p-2 md:p-10 text-left">
-          <div className="text-sm md:text-lg lg:text-xl  animate__animated animate__slideInRight">
+        <div className="w-full flex items-center justify-center border-3 rounded-lg bg-gray-100 md:m-1 p-2 mt-3 md:p-10 text-left">
+          <div className="text-sm md:text-lg lg:text-xl animate__animated animate__slideInRight">
             <p className="text-center">
               <span className="md:text-lg lg:text-2xl "> I'm Jacqueline. 😊 You can call me JQ! </span>
               <img className="jqlogo w-30 h-20 md:w-50 md:h-30 mx-auto" src={jqLogo} alt="JQ Logo" loading="lazy" />
