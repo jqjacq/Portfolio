@@ -18,7 +18,7 @@ const TopPlanes = () => {
         }
         startX="60vw"
         stopX="-15vw"
-        setY={-24}
+        startY="0.5vw"
         scaleX={-1}
         duration={5}
         times={(0, 0.5, 1)}
@@ -38,7 +38,7 @@ const TopPlanes = () => {
         }
         startX="-15vw"
         stopX="60vw"
-        setY="0"
+        startY="0vw"
         scaleX={1}
         duration={5}
         delay={1}
@@ -55,9 +55,9 @@ const TopPlanes = () => {
             />
           </svg>
         }
-        startX="60vw"
-        stopX="-15vw"
-        setY={10}
+        startX="70vw"
+        stopX="0.5vw"
+        startY={10}
         scaleX={-1}
         duration={10}
         times={(0.25, 0.5, 0.75, 1)}

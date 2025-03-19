@@ -30,7 +30,7 @@ const ProjectSlider = ({ year, badge }) => {
         className="mySwiper"
       >
         {filteredYearProjects.map((project) => {
-          const imageSrc = `/src/assets/${year}/${project.img}`;
+          const imageSrc = `/projects/${year}/${project.img}`;
           const projectLink = project.website
             ? `https://jqjacq.github.io/${project.link}`
             : `https://github.com/jqjacq/${project.link}`;
