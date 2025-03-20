@@ -16,7 +16,7 @@ const recentlist = [
     id: 2,
     name: "📂 Personal Portfolio",
     img: "personalportfolio.png",
-    cloud: "AWS (S3, IAM, Certificate Manager, Route 53)",
+    cloud: "AWS (S3, CloudFront, IAM, Certificate Manager, Route 53)",
     tools: "React, Tailwind, Swiper, Framer Motion",
     description: `My portfolio built with React and Tailwind CSS.`,
     className: "recentproject",
