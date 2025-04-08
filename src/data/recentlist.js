@@ -20,7 +20,7 @@ const recentlist = [
     tools: "React, Tailwind, Swiper, Framer Motion",
     description: `My portfolio built with React and Tailwind CSS.`,
     className: "recentproject",
-    code: "",
+    code: "https://github.com/jqjacq/Portfolio",
     link: "https://www.jqjacq.dev/",
   },
 ];

@@ -26,7 +26,7 @@ const RecentProjects = () => {
         </ProjectBadge>
 
         <div className="flex justify-center items-center">
-          <a href={project.link} target="_blank" rel="noreferrer">
+          <a href={project.code} target="_blank" rel="noreferrer">
             <img
               className="w-50 hover:opacity-75 hover:shadow-lg
                     active:border-2 active:border-gray-500"
